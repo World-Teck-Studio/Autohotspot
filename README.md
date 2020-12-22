@@ -1,4 +1,4 @@
-# HostpostAuto V1.5
+# HotspotAuto V 1.5
 
 - Correctif langue
 - mise en place du mots de passe
