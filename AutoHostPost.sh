@@ -35,13 +35,38 @@ clear
 # ------------------------------------------------------------
 
 
-echo "Copie de sauvegarde du fichier de configuration original du WiFi"
+echo "Création d'une sauvegarde du fichier de configuration WiFi"
 sleep "4"
 clear
 
-sudo cp /etc/wpa_supplicant/wpa_supplicant.conf /etc/wpa_supplicant/wpa_supplicant.conf.org && sudo  rm  /etc/wpa_supplicant/wpa_supplicant.conf
+sudo cp /etc/wpa_supplicant/wpa_supplicant.conf /etc/wpa_supplicant/wpa_supplicant.conf.sav
+clear
 
-echo "Copie TERMINER"
+echo "Suppression du fichier de configuration WiFi pour retourner à une configuration vierge"
+sleep "2"
+clear
+
+sudo cp /dev/null /etc/wpa_supplicant/wpa_supplicant.conf
+
+echo "Sauvegarde est copie TERMINER"
+sleep "4"
+clear
+
+
+# ------------------------------------------------------------
+
+echo "Modification de la region du WIFI"
+sleep "4"
+echo ".............................."
+sleep "4"
+echo "Modification MANUELLEMENT"
+sleep "4"
+clear
+
+sudo raspi-config
+clear
+
+echo "Modification TERMINER"
 sleep "4"
 clear
 
@@ -63,38 +88,29 @@ confirm()
 }
 
 if confirm "ATTENTION : voici l'adressse ip pour vous conntecter sur le reseau RaspAP  10.3.141.0 "; then
-clear
 
 echo "Installation de raspAP-webgui"
 sleep "4"
 clear
 
-wget -q https://git.io/voEUQ -O /tmp/raspap &amp;&amp; bash /tmp/raspap -y
+wget -q https://git.io/voEUQ -O /tmp/raspap && bash /tmp/raspap -y
+
 
 else
-clear
 
 echo "Installation de raspAP-webgui"
 sleep "4"
 clear
 
-wget -q https://git.io/voEUQ -O /tmp/raspap &amp;&amp; bash /tmp/raspap -y
- 
+wget -q https://git.io/voEUQ -O /tmp/raspap && bash /tmp/raspap -y
+
 fi
 
 
 # ------------------------------------------------------------
 
 
+
 echo "Merci d'avoir suivi le tuto..."
 sleep "4"
 echo ".............................."
-sleep "1"
-echo "Copier coller le code : googlesamples-assistant-pushtotalk --project-id IDPROJECT --device-model-id VOTREID"
-sleep "1"
-echo ".............................."
-sleep "1"
-echo "Copier coller le code : sudo reboot"
-sleep "1"
-echo ".............................."
-sleep "4"
