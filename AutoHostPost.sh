@@ -73,6 +73,21 @@ clear
 
 
 # ------------------------------------------------------------
+echo "Prenez note des informations suivantes"
+sleep "4"
+echo ""
+sleep "1"
+echo "Votre adresse de connection via l'explorer"
+echo "------------------------------------------"
+sleep "2"
+sudo hostname -I
+echo ""
+sleep "2"
+echo "ID: admin  Mots de passe: secret"
+sleep "2"
+echo ""
+sleep "1"
+
 
 confirm()
 {
@@ -88,7 +103,7 @@ confirm()
     esac
 }
 
-if confirm "ATTENTION : voici l'adressse ip pour vous conntecter sur le reseau RaspAP  10.3.141.0 "; then
+if confirm "ATTENTION : Avez-vous bien pris note des information ci-dessu ? "; then
 
 echo "Installation de raspAP-webgui"
 sleep "4"
