@@ -127,6 +127,8 @@ fi
 
 clear
 echo "Merci d'avoir suivi le tuto..."
+echo "== YOUTUBE: world-teck STUDIO =="
+echo "== TWITCH: WorldTeck_studio_ =="
 sleep "6"
 clear
 echo "Redemarrage dans 6"
