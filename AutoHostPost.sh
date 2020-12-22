@@ -63,13 +63,7 @@ confirm()
 }
 
 if confirm "ATTENTION : voici l'adressse ip pour vous conntecter sur le reseau RaspAP  10.3.141.0 "; then
-
-
-  
-fi
-
-
-# ------------------------------------------------------------
+clear
 
 echo "Installation de raspAP-webgui"
 sleep "4"
@@ -77,8 +71,20 @@ clear
 
 wget -q https://git.io/voEUQ -O /tmp/raspap &amp;&amp; bash /tmp/raspap -y
 
+else
+clear
+
+echo "Installation de raspAP-webgui"
+sleep "4"
+clear
+
+wget -q https://git.io/voEUQ -O /tmp/raspap &amp;&amp; bash /tmp/raspap -y
+ 
+fi
+
 
 # ------------------------------------------------------------
+
 
 echo "Merci d'avoir suivi le tuto..."
 sleep "4"
