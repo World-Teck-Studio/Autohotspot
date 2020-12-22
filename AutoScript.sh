@@ -5,39 +5,78 @@ sleep "2"
 echo "== SCRIPT DE WORLD-TECK STUDIO == "
 echo "== YOUTUBE: world-teck STUDIO =="
 echo "== TWITCH: WorldTeck_studio_ =="
-echo "== Version du script 2.1 AUTOMATIQUE =="
+echo "== Version du script 1.0 AUTOMATIQUE =="
 sleep "6"
 clear
 
 # ------------------------------------------------------------
 
-echo "Démarrage AUTOMATIQUE de GOOGLE HOME"
+
+echo "Insalltation de HostPost"
 sleep "4"
 clear
 
-nano /home/pi/ScriptGoogleRPI/start_assistant.sh
 
 # ------------------------------------------------------------
 
-echo "Démarrage des services "
+
+echo "Mise a jour du raspberry et de Raspbian"
 sleep "4"
 clear
 
-cd /home/pi/ScriptGoogleRPI/
-mv assistant.service /lib/systemd/system/
-cd /home/pi/
-sleep "2"
-clear
+sudo apt-get update -y && sudo apt-get upgrade -y
 
-echo "Recherche du service"
-sudo systemctl enable assistant.service
+echo "Mise a jour TERMINER"
 sleep "4"
 clear
 
-echo "Service Activer "
-sudo systemctl start assistant.service
+
+
+# ------------------------------------------------------------
+
+
+echo "Copie de sauvegarde du fichier de configuration original du WiFi"
 sleep "4"
 clear
+
+sudo cp /etc/wpa_supplicant/wpa_supplicant.conf /etc/wpa_supplicant/wpa_supplicant.conf.org && sudo  rm  /etc/wpa_supplicant/wpa_supplicant.conf
+
+echo "Copie TERMINER"
+sleep "4"
+clear
+
+
+# ------------------------------------------------------------
+
+confirm()
+{
+    read -r -p "${1} [y/N] " response
+
+    case "$response" in
+        [yY][eE][sS]|[yY]) 
+            true
+            ;;
+        *)
+            false
+            ;;
+    esac
+}
+
+if confirm "ATTENTION : voici l'adressse ip pour vous conntecter sur le reseau RaspAP  10.3.141.0 "; then
+
+
+  
+fi
+
+
+# ------------------------------------------------------------
+
+echo "Installation de raspAP-webgui"
+sleep "4"
+clear
+
+wget -q https://git.io/voEUQ -O /tmp/raspap &amp;&amp; bash /tmp/raspap -y
+
 
 # ------------------------------------------------------------
 
