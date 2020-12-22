@@ -109,8 +109,30 @@ fi
 
 # ------------------------------------------------------------
 
-
-
+clear
 echo "Merci d'avoir suivi le tuto..."
+sleep "6"
+clear
+echo "Redemarrage dans 6"
+sleep "1"
+clear
+echo "Redemarrage dans 5"
+sleep "1"
+clear
+echo "Redemarrage dans 4"
+sleep "1"
+clear
+echo "Redemarrage dans 3"
+sleep "1"
+clear
+echo "Redemarrage dans 2"
+sleep "1"
+clear
+echo "Redemarrage dans 1"
+sleep "1"
+clear
+echo "...REBOOT..."
 sleep "4"
-echo ".............................."
+sudo reboot
+
+
