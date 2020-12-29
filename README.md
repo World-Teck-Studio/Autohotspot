@@ -1,7 +1,7 @@
-# HotspotAuto V 1.5
+# HotspotAuto V 2.0
 
-- Correctif langue
-- mise en place du mots de passe
-- mise en place de l'id
-- restart à la fin du script
-- installation automatique du hostpot
+- Corrective langue
+- Mise en place du mot de passe 
+- Mise en place id 
+- Restart à la fin du script 
+- Installation automatique du hotspot
