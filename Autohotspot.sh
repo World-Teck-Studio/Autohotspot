@@ -5,7 +5,7 @@ sleep "2"
 echo "== SCRIPT DE WORLD-TECK STUDIO == "
 echo "== YOUTUBE: world-teck STUDIO =="
 echo "== TWITCH: WorldTeck_studio_ =="
-echo "== Version du script 1.5 AUTOMATIQUE =="
+echo "== Version du script 2.0 AUTOMATIQUE =="
 sleep "6"
 clear
 
@@ -60,7 +60,7 @@ echo ".............................."
 sleep "4"
 clear
 
-echo "Modification MANUELLEMENT"
+echo "Modification ......"
 sleep "4"
 clear
 
@@ -77,7 +77,7 @@ echo "Prenez note des informations suivantes"
 sleep "4"
 echo ""
 sleep "1"
-echo "Votre adresse de connection via l'explorer"
+echo "Votre adresse de connexion via l'explorer"
 echo "------------------------------------------"
 sleep "2"
 sudo hostname -I
